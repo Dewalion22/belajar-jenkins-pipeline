@@ -23,6 +23,9 @@ pipeline {
         failure {
             echo "oh no, failure"
         }
+        cleanup {
+            echo "Don't care succes or error"
+        }
     }
 
 }
