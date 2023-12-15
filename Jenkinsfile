@@ -1,5 +1,9 @@
 pipeline {
-    agent any
+    agent {
+     node {
+         lane; "linux && java11"
+     }
+    }
     
     stages {
         stage('Hello') {
