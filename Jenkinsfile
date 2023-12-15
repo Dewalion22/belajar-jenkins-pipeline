@@ -1,7 +1,7 @@
 pipeline {
     agent {
      node {
-         lane; "linux && java11"
+         label "linux && java11"
      }
     }
     
