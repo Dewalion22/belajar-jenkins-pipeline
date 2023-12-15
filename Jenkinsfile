@@ -12,4 +12,17 @@ pipeline {
             }
         }
     }
+
+    post {
+        always {
+            echo "I will alaways say Hello Again"
+    }
+        succes {
+            echo "Yay, succes"
+        }       
+        failure {
+            echo "oh no, failure"
+        }
+    }
+
 }
