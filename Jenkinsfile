@@ -15,9 +15,9 @@ pipeline {
 
     post {
         always {
-            echo "I will alaways say Hello Again"
-    }
-        succes {
+            echo "I will alaways say Hello Again!"
+        }
+        success {
             echo "Yay, succes"
         }       
         failure {
