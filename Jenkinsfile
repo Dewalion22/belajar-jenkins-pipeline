@@ -37,7 +37,7 @@ pipeline {
                 echo ("Finish Deploy")
             }
         }
-        }
+        
  post {
         always {
             echo "I will alaways say Hello Again!"
