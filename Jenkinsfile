@@ -6,18 +6,9 @@ pipeline {
     }
 
     stages {
-        stage('Build') {
-            steps {
-                echo ('Start Build')
-                sh("./mvnw clean compile test-compile")
-                echo ('Finish Build')
-
-            }
-        }
-        
         stage('Test') {
-
             steps {
+        
             script {
                   def data = [
                       "firstName": "Eko",
@@ -31,33 +22,10 @@ pipeline {
                 sh("./mvnw test")
                 echo ("Finish Test")
             }
-        }
-
-           stage('Deploy') {
-            steps {
-            
-                echo ('Start Deploy')
-                echo ("Finish Deploy")
-            }
-        }
+        }    
     }
         
- post {
-        always {
-            echo "I will alaways say Hello Again!"
-        }
-        success {
-            echo "Yay, succes"
-        }
-        failure {
-            echo "oh no, failure"
-        }
-        cleanup {
-            echo "Don't care succes or error"
-        }
-    }
-
-    }
+}
 
    
 
