@@ -14,7 +14,6 @@ pipeline {
                      "lastName":"M"
                  ]
                     writeJSON(file : "data.json", json:data)
-                    }
                 }
 
                 echo ('Start Build')
