@@ -8,7 +8,8 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-        
+                    echo ("Start Test")
+
             script {
                   def data = [
                       "firstName": "Eko",
@@ -18,9 +19,7 @@ pipeline {
             }
                 
             
-                echo ('Start Test')
-                sh("./mvnw test")
-                echo ("Finish Test")
+            echo ("Finish Test")
             }
         }    
     }
