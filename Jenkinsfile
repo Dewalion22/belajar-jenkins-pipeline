@@ -10,10 +10,10 @@ pipeline {
             steps {
                 script {
                  def data = [
-                     "firstName":"Fadel",
-                     "lastName":"M"
+                     "firstName": "Fadel",
+                     "lastName": "M"
                  ]
-                    writeJSON(file : "data.json", json:data)
+                    writeJSON(file: "data.json", json:data)
                 }
 
                 echo ('Start Build')
