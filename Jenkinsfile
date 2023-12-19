@@ -14,7 +14,10 @@ pipeline {
 
             }
         }
+        
         stage('Test') {
+
+            steps {
             script {
                   def data = [
                       "firstName": "Eko",
@@ -28,6 +31,7 @@ pipeline {
                 sh("./mvnw test")
                 echo ("Finish Test")
             }
+        }
 
            stage('Deploy') {
             steps {
