@@ -4,7 +4,7 @@ pipeline {
          label "linux && java11"
      }
     }
-    
+
     stages {
         stage('Build') {
             steps {
@@ -13,7 +13,7 @@ pipeline {
                         echo("Script ${i}")
                     }
                 }
-                
+
                 echo ('Start Build')
                 sh("./mvnw clean compile test-compile")
                 echo ('Finish Build')
@@ -26,7 +26,7 @@ pipeline {
             }
         }
         }
-        
+
     }
 
     post {
@@ -35,14 +35,14 @@ pipeline {
         }
         success {
             echo "Yay, succes"
-        }       
+        }
         failure {
             echo "oh no, failure"
         }
         cleanup {
             echo "Don't care succes or error"
         }
+    }
 }
-
 
 
