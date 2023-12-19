@@ -43,6 +43,6 @@ pipeline {
         cleanup {
             echo "Don't care succes or error"
         }
-    }
-
 }
+
+
