@@ -5,7 +5,7 @@ pipeline {
      }
     }
 
-    stage {
+    stages {
         stage('Build') {
             steps {
                 echo ('Start Build')
@@ -28,15 +28,15 @@ pipeline {
                 sh("./mvnw test")
                 echo ("Finish Test")
             }
-        }
 
-    stage('Deploy') {
+           stage('Deploy') {
             steps {
             
                 echo ('Start Deploy')
                 echo ("Finish Deploy")
             }
         }
+    }
         
  post {
         always {
