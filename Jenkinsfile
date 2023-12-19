@@ -20,9 +20,12 @@ pipeline {
 
             }
         }
-        stage('Deploy') {
+        stage('Test') {
             steps {
-                echo 'Hello Deploy'
+            
+                echo ('Start Test')
+                sh("./mvnw test")
+                echo ("Finish Test")
             }
         }
         }
