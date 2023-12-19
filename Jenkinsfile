@@ -11,10 +11,10 @@ pipeline {
                     echo ("Start Test")
 
             script {
-                  def data = [
-                      "firstName": "Eko",
-                      "lastName" : "Khannedy"
-                      ]
+                def data = [
+                    "firstName": "Eko",
+                    "lastName" : "Khannedy"
+             ]
               writeJSON(file: "data.json", json: data)
             }
                 
