@@ -5,7 +5,7 @@ pipeline {
      }
     }
 
-    stages {
+    stage {
         stage('Build') {
             steps {
                 echo ('Start Build')
@@ -16,12 +16,12 @@ pipeline {
         }
         stage('Test') {
             script {
-          def data = [
-              "firstName": "Eko",
-              "lastName" : "Khannedy"
-          ]
-          writeJSON(file: "data.json", json: data)
-        }
+                  def data = [
+                      "firstName": "Eko",
+                      "lastName" : "Khannedy"
+                      ]
+              writeJSON(file: "data.json", json: data)
+            }
                 
             
                 echo ('Start Test')
