@@ -20,14 +20,13 @@ pipeline {
 
             }
         }
-        
-        }
-
-         stage('Deploy') {
+        stage('Deploy') {
             steps {
                 echo 'Hello Deploy'
             }
         }
+        }
+        
     }
 
     post {
@@ -44,5 +43,6 @@ pipeline {
             echo "Don't care succes or error"
         }
 }
+
 
 
