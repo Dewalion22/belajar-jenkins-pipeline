@@ -2,7 +2,7 @@ pipeline {
   agent none
   stages {
 
-    stage("Prepare) {
+    stage("Prepare") {
           agent{
              node {
               label "linux && java11"
